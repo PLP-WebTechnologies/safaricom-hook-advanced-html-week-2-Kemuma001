@@ -1,13 +1,13 @@
 1.Creating a multimedia-rich webpage with audio and video elements
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multimedia-Rich Webpage</title>
-    <style>
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Multimedia-Rich Webpage</title>
+     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -20,10 +20,10 @@
             border: 2px solid #000;
             border-radius: 10px;
         }
-    </style>
-</head>
-<body>
-    <h1>Welcome to My Multimedia Webpage</h1>
+     </style>
+     </head>
+    <body>
+     <h1>Welcome to My Multimedia Webpage</h1>
 
     <h2>Audio</h2>
     <audio controls autoplay loop>
@@ -32,7 +32,7 @@
         Your browser does not support the audio element.
     </audio>
 
-    <h2>Video</h2>
+     <h2>Video</h2>
     <video width="320" height="240" controls autoplay loop muted poster="poster-image.jpg">
         <source src="video-file.mp4" type="video/mp4">
         <source src="video-file.ogg" type="video/ogg">
@@ -49,13 +49,13 @@
 2.Designing a registration form with validation attributes
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form with Validation</title>
-    <style>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registration Form with Validation</title>
+      <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
