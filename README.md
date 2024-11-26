@@ -1,48 +1,133 @@
-### Assignment: Building a Multimedia Webpage and a Registration Form  
+1.Creating a multimedia-rich webpage with audio and video elements
 
-#### Objective: 
-The goal of this assignment is to create a multimedia-rich webpage featuring audio and video elements and design a simple registration form with built-in HTML validation.  
 
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia-Rich Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        audio, video {
+            margin: 20px 0;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Multimedia Webpage</h1>
 
-### Part 1: Multimedia Webpage 
-Create an HTML webpage that includes the following:  
-1. **Audio Element**:  
-   - Add an audio file using the `<audio>` tag.  
-   - Provide controls to play, pause, and adjust the volume.  
-   - Use at least one source format (e.g., `.mp3` or `.ogg`).  
+    <h2>Audio</h2>
+    <audio controls autoplay loop>
+        <source src="audio-file.mp3" type="audio/mpeg">
+        <source src="audio-file.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
 
-2. **Video Element**:  
-   - Add a video file using the `<video>` tag.  
-   - Provide controls to play, pause, and adjust the volume.  
-   - Include at least two source formats for compatibility (e.g., `.mp4` and `.webm`).  
-   - Add a poster image that displays before the video plays.  
+    <h2>Video</h2>
+    <video width="320" height="240" controls autoplay loop muted poster="poster-image.jpg">
+        <source src="video-file.mp4" type="video/mp4">
+        <source src="video-file.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
 
-**Example Output:**  
-A webpage where users can play an audio track and watch a video.  
 
----
 
-### **Part 2: Registration Form **  
-Design a user registration form with the following requirements:  
 
-1. **Form Elements**:  
-   - Full Name (Text input)  
-   - Email Address (Input of type `email`)  
-   - Password (Input of type `password`)  
-   - Age (Input of type `number`, with a minimum value of 18)  
-   - Gender (Radio buttons for Male, Female, Other)  
-   - Terms and Conditions (Checkbox to agree before submitting)  
 
-2. **Validation**:  
-   - Use HTML5 validation attributes such as `required`, `min`, `maxlength`, etc.  
-   - Ensure the email field has proper validation for email format.  
-   - Make the password field require at least 8 characters.  
 
-3. **Submit Button**:  
-   - Include a "Register" button to submit the form.  
+2.Designing a registration form with validation attributes
 
-**Example Output:**  
-A user-friendly registration form that prevents submission if required fields are not filled correctly.  
 
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-container h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" id="zipcode" name="zipcode" pattern="\d{5}" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
